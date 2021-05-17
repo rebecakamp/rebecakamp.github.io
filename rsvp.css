@@ -1,0 +1,44 @@
+header, footer,.header_two {
+    background: #f3eeda;
+}
+.header_two {
+    box-shadow: 0 5px 5px rgba(58, 57, 57, 0.281);
+}
+footer {
+    min-height: 73px;
+}
+body {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+main {
+    background-color: rgb(96, 126, 100);
+}
+.title {
+    font-family: 'Kunstler Script', Helvetica, sans-serif;
+    color: #3b6e29;
+}
+.title-date {
+    font-weight: bold;
+    color:#6b6d76;
+    font-size: 1.2em;
+}
+.title-address {
+    color: rgb(211, 164, 104);
+}
+.section_one {    
+    background-image: url(assets/barn_front.jpg);
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: cover;
+    height: calc(100vh - 163px);
+}
+.overlay-text {
+    max-height: max-content;
+    color:#dfdfdf;
+}
+.overlay-text-primary {
+    font-size: calc(5vw);
+}
+.overlay-text-secondary {
+    font-size: calc(2.5vw);
+}
