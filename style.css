@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
 header, footer,.header_two {
     background: #f3eeda;
 }
@@ -11,39 +18,54 @@ body {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 main {
-    background-color: rgb(96, 126, 100);
+    background-color: rgb(159, 180, 162);
 }
 .title {
     font-family: 'Kunstler Script', Helvetica, sans-serif;
-    color: #3b6e29;
+    color: #3f8027;
+    /* color: #a7c999; */
 }
 .title-date {
     font-weight: bold;
-    color:#6b6d76;
+    color:#6c866f;
     font-size: 1.2em;
 }
 .title-address {
-    color: rgb(211, 164, 104);
+    color: rgb(37, 75, 32);
 }
-.section_one {    
-    background-image: url(assets/barn_whole.jpg);
+.overlay-text {
+    color:#acd1a8;
+    height: 35%;
+    text-shadow: 3px 3px #727c73;;
+}
+.overlay-text-primary {
+    font-size: calc(5vw);
+}
+.overlay-text-secondary {
+    color:rgb(40, 43, 40);
+    font-size: calc(2.5vw);
+}
+.section_nav {
+    height: 5em;
+}
+.sections {
+    height: calc(100vh - 73px - 116px);
+}
+.section_wrapper:nth-child(odd) {
+    background: rgba(173, 173, 173, 0.849);
+}
+#section_one {    
+    /* background-image: url(assets/barn_whole.jpg); */
+    background-image: url(assets/HandRing.png);
     background-repeat: no-repeat, repeat;
     background-position: center;
     background-size: cover;
     height: calc(100vh - 256px);
 }
-.section_two {
-    height: calc(100vh - 73px - 116px);
+#section_two {
+    height: calc(100vh - 116px); 
 }
-.overlay-text {
-    max-height: max-content;
-    color:#a2c49f;
-}
-.overlay-text-primary {
-    font-size: calc(5vw);
-    text-shadow: 3px 3px rgba(41, 41, 41, 0.808);
-}
-.overlay-text-secondary {
-    font-size: calc(2.5vw);
-    text-shadow: 2px 2px rgba(65, 64, 64, 0.849);
+.anchor {
+    position: relative;
+    top: -172px;
 }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Rebeca & Kamp's Wedding</title>
@@ -13,6 +12,7 @@
 </head>
 
 <body class="">
+    <!-- HEADER -->
     <header class="justify-content-center px-4 pt-4">
         <div class="container">
             <span class="display-1 title text-center justify-content-center d-flex flex-column">
@@ -20,44 +20,81 @@
             </span>
         </div>
     </header>
+
+    <!-- Sub Header Sticky -->
     <div class="header_two d justify-content-around p-4 sticky-top">
         <div class="conatiner">
             <div class="row">
-                <div class="col d-flex justify-content-center align-items-end">More details to come</div>
+                <div class="col d-flex justify-content-center align-items-end">
+                    <!-- More details to come -->
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <!-- <a type="button" class="btn btn-secondary" href="#section_one_anchor">Top of Page</a> -->
+                        <a type="button" class="btn btn-secondary" href="#section_two_anchor">Wedding Details</a>
+                        <a type="button" class="btn btn-secondary" href="#section_three_anchor">Location</a>
+                    </div>
+                </div>
                 <div class="col">
                     <span class="title-date mt-2 text-center justify-content-center d-flex flex-column">
                         January 15th, 2022
                     </span>
                     <span class="title-address mt-2 text-center justify-content-center d-flex flex-column">
-                        18810 Misty Morning Lane, Fort Myers, Florida 33913
+                        <a href="https://goo.gl/maps/5EfeBZrQZjaccWnH8">18810 Misty Morning Lane, Fort Myers, Florida 33913</a>
                     </span>
                 </div>
                 <div class="col d-flex justify-content-center align-items-end">
-                    <a class="btn btn-warning" href="./rsvp.html">RSVP Here!</a>
+                    <!-- <a class="btn btn-warning" href="./rsvp.html">RSVP Here!</a> -->
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Main Body -->
     <main>
-        <div class="section_one jumbotron mb-0">
-            <div class="d-flex justify-content-center align-items-center h-100">
-            <div class="overlay-text text-center w-100">
-                <div class="jumbotron-title overlay-text-primary">
+
+        <!-- Section one -->
+        <div class="jumbotron mb-0" id="section_one">
+            <span class="anchor" id="section_one_anchor"></span>
+            <div class="d-flex justify-content-center flex-column align-items-center h-100">
+                <div class="overlay-text jumbotron-title overlay-text-primary text-center d-flex align-items-center">
                     We're Getting Married!
                 </div>
-                <div class="overlay-text-secondary text-center mt-4">
+                <div class="overlay-text overlay-text-secondary text-center d-flex align-items-center mt-4">
                     Save the dates mailing soon.
                 </div>
             </div>
         </div>
-    </div>
-    <div class="section_two">
-        Other stuff here
-    </div>
+
+        <!-- Section two -->
+        <div class="section_wrapper">
+            <div class="text-center">
+                <span class="anchor" id="section_two_anchor"></span>
+                <label class="display-4 pt-3">Wedding Details</label>
+            </div>
+
+            <div class="sections" id="section_two">
+                TBA
+            </div>
+        </div>
+        
+        <!-- Section three -->
+        <div class="section_wrapper">
+            <div class="text-center">
+                <span class="anchor" id="section_three_anchor"></span>
+                <label class="display-4 pt-3">Location</label>
+            </div>
+            <div class="sections" id="section_three">
+                <div class="d-flex h-100 flex-column justify-content-center align-items-center">
+                    <a href="https://goo.gl/maps/5EfeBZrQZjaccWnH8"><label>Misty Morning Barn @ Clutch Farms</label></a>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.5959865479713!2d-81.57907008442382!3d26.46874898543184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88db0b6526417b63%3A0xd1de2d3d05fdabdf!2sMisty%20Morning%20Barn!5e0!3m2!1sen!2sus!4v1622924882016!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
     </main>
+
+    <!-- FOOTER -->
     <footer class="p-4">
         <span class="row justify-content-center text-muted">Copyright &copy; 2021 KodingKamp. All Rights Reserved</span>
     </footer>
-</body>
 
+</body>
 </html>
