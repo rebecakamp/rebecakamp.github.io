@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-size: 1.01em;
 }
 html {
     scroll-behavior: smooth;
@@ -10,8 +11,10 @@ header, footer,.header_two {
 }
 .header_two {
     box-shadow: 0 5px 5px rgba(58, 57, 57, 0.281);
+    background-color: #f3eedafa;
 }
 footer {
+    box-shadow: 5px 0 5px rgba(58, 57, 57, 0.281);
     min-height: 73px;
 }
 body {
@@ -34,38 +37,43 @@ main {
     color: rgb(37, 75, 32);
 }
 .overlay-text {
-    color:#acd1a8;
-    height: 35%;
-    text-shadow: 3px 3px #727c73;;
+    color:#dce7db;
+    height: 40%;
+    text-shadow: 3px 3px #797e79;;
 }
 .overlay-text-primary {
     font-size: calc(5vw);
 }
 .overlay-text-secondary {
-    color:rgb(40, 43, 40);
+    color:rgb(61, 63, 61);
     font-size: calc(2.5vw);
 }
 .section_nav {
     height: 5em;
 }
-.sections {
-    height: calc(100vh - 73px - 116px);
-}
-.section_wrapper:nth-child(odd) {
-    background: rgba(173, 173, 173, 0.849);
+.section_wrapper {
+    min-height: calc(100vh - 103px - 92px);
+    background: rgba(226, 226, 223, 0.849);
 }
 #section_one {    
-    /* background-image: url(assets/barn_whole.jpg); */
-    background-image: url(assets/HandRing.png);
+    background-image: url(assets/RebecaKamp_01.png);
     background-repeat: no-repeat, repeat;
     background-position: center;
     background-size: cover;
-    height: calc(100vh - 256px);
 }
-#section_two {
-    height: calc(100vh - 116px); 
+.section_wrapper:last-child {
+    min-height: calc(100vh - 92px - 103px);
+    margin-top: auto;
+    margin-bottom: auto;
 }
 .anchor {
     position: relative;
-    top: -172px;
+    top: -158px;
+}
+.nav_anchor, .nav_anchor:hover, .nav_anchor:visited {
+    text-decoration: none;
+    color: black !important;
+}
+.side-image {
+    height: calc(100vh - 92px - 103px);
 }
