@@ -21,7 +21,7 @@ body {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 main {
-    background-color: rgb(159, 180, 162);
+    background:  url(assets/wooden_slats.png);
 }
 .title {
     font-family: 'Kunstler Script', Helvetica, sans-serif;
@@ -60,11 +60,16 @@ main {
     background-repeat: no-repeat, repeat;
     background-position: center;
     background-size: cover;
+    min-height: calc(100vh - 103px);
 }
 .section_wrapper:last-child {
     min-height: calc(100vh - 92px - 103px);
     margin-top: auto;
     margin-bottom: auto;
+}
+.section_header {
+    background: rgba(226, 226, 223, 0.418);
+    color: rgb(119, 103, 72);
 }
 .anchor {
     position: relative;
