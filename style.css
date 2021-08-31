@@ -23,10 +23,19 @@ body {
 main {
     background:  url(assets/wooden_slats.png);
 }
+#section_two {
+    border-radius: 40px;
+    overflow: hidden;
+}
+#portrait {
+    padding-left: 0;
+    padding-right: 0;
+}
 .title {
     font-family: 'Kunstler Script', Helvetica, sans-serif;
     color: #3f8027;
     /* color: #a7c999; */
+    white-space: nowrap;
 }
 .title-date {
     font-weight: bold;
@@ -52,20 +61,7 @@ main {
     height: 5em;
 }
 .section_wrapper {
-    min-height: calc(100vh - 103px - 92px);
     background: rgba(226, 226, 223, 0.849);
-}
-#section_one {    
-    background-image: url(assets/RebecaKamp_01.png);
-    background-repeat: no-repeat, repeat;
-    background-position: center;
-    background-size: cover;
-    min-height: calc(100vh - 103px);
-}
-.section_wrapper:last-child {
-    min-height: calc(100vh - 92px - 103px);
-    margin-top: auto;
-    margin-bottom: auto;
 }
 .section_header {
     background: rgba(226, 226, 223, 0.418);
@@ -81,4 +77,7 @@ main {
 }
 .side-image {
     height: calc(100vh - 92px - 103px);
+}
+.card:hover {
+    cursor: pointer;
 }
