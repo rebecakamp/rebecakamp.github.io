@@ -37,7 +37,7 @@ main {
     padding-right: 0;
 }
 .title {
-    font-family: 'Kunstler Script', Courier, sans-serif;
+    font-family: 'Kunstler Script', sans-serif;
     color: #3f8027;
     /* color: #a7c999; */
     white-space: nowrap;
