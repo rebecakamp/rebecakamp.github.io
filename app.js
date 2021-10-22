@@ -1,3 +1,15 @@
+const _landscapeImageIds = [
+        86, 72, 78, 58, 14, 40, 46, 84, 15, 83, 59, 16, 82, 85, 45, 61, 39,
+    ],
+    _portraitImageIds = [
+        38, 32, 26, 27, 13, 76, 17, 5, 53, 10, 28, 4, 69, 57, 48, 2, 81,
+        31, 60, 23, 77, 6, 41, 21, 20, 35, 50, 37, 79, 80, 54, 42, 52,
+        67, 1, 30, 68, 71, 33, 55, 8, 22, 11, 73, 70, 45, 3, 56, 12, 19,
+        65, 36, 29, 51, 34, 9, 66, 74, 49, 7, 25, 47, 62, 64, 24, 18, 44,
+        75, 43, 63
+    ]
+
+
 const navTargetRegistry = () => {
     window.open(
         "https://www.target.com/gift-registry/giftgiver?registryId=152e7cfdeada41aebb14d2a5d44a2b20&type=WEDDING",
@@ -19,51 +31,46 @@ const navCBRegistry = () => {
     )
 }
 
-// let _portraits = [
-//     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 17, 18, 19, 20, 21,
-//     22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37,
-//     38, 41, 42, 43, 44, 45, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56,
-//     57, 60, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 73, 74, 75, 76,
-//     77, 79, 80, 81
-// ]
-    
-// let _landscapes = [
-//     14, 15, 16, 39, 40, 45, 46, 58, 59, 61, 72, 78, 82, 83, 84, 85, 86
-// ]
+function makeImageCarousel(imageCarouselId, imageIds) {
+    let imageCarousel = document.getElementById(imageCarouselId),
+        DOMString = "",
+        firstImage = true;
 
-// let portraits = [..._portraits];
-// let landscapes = [..._landscapes];
+    imageIds.forEach(imageId => {
+        DOMString += `<div class="carousel-item ${firstImage ? "active" : ''}">
+            <img class="d-block w-100" src="/assets/LoveLettersCo${imageId}.jpg" alt="Some Cute Image Of Us">
+        </div>`;
+        if (firstImage)
+            firstImage = false;
+    })
+    imageCarousel.innerHTML = DOMString;
+}
 
-// const getAssortedPortraits = () => {
+function createCountDown() {
+    let countDownDate = new Date("Jan 15, 2022").getTime(),
+        now = new Date().getTime(),
+        distance = countDownDate - now,
+        days = Math.floor(distance / (1000 * 60 * 60 * 24)),
+        daysTerm = Math.abs(days) > 1 ? "days" : "day",
+        DOMString;
 
-//     if (portraits.length === 0)
-//         portraits = [..._portraits];
+    if (days > 0) {
+        DOMString = `${days} ${daysTerm} until the wedding!`;
+    }
+    else if (days === 0) {
+        DOMString = "The wedding is TODAY!";
+    }
+    else {
+        DOMString = `The wedding was ${Math.abs(days)} ${daysTerm} ago.`
+    }
 
-//     let index = Math.floor(Math.random() * portraits.length);
-//     let returnVal = portraits[index];
-//     portraits.splice(index, 1);
+    document.getElementById("count-down").innerHTML = DOMString;
+}
 
-//     return returnVal;
-// }
+function init() {
+    makeImageCarousel('image-carousel', _landscapeImageIds);
+    makeImageCarousel('image-carousel-vert', _portraitImageIds);
+    createCountDown();
+}
 
-// const getAssortedLandscapes = () => {
-
-//     if (landscapes.length === 0)
-//         landscapes = [..._landscapes];
-
-//     let index = Math.floor(Math.random() * landscapes.length);
-//     let returnVal = landscapes[index];
-//     landscapes.splice(index, 1);
-
-//     return returnVal;
-// }
-
-// let landscapeTimer = setInterval(() => {
-//     document.getElementById("section_one").style.backgroundImage =
-//         `url(assets/LoveLettersCo${getAssortedLandscapes()}.jpg)`
-// }, 4000);
-
-// let portraitTimer = setInterval(() => {
-//     document.getElementById("portrait").src =
-//         `assets/LoveLettersCo${getAssortedPortraits()}.jpg`
-// }, 5000);
+init();

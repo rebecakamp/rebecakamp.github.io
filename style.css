@@ -18,21 +18,28 @@ footer {
     min-height: 73px;
 }
 body {
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-family: Garamond, serif;
 }
 main {
     background:  url(assets/wooden_slats.png);
 }
+.carousel-item {
+}
 #section_two {
     border-radius: 40px;
     overflow: hidden;
+    max-height: 80vh;
 }
-#portrait {
+#count-down {
+    color: #f1f1f1;
+    text-shadow: #4d744d 3px 3px;
+}
+.portrait {
     padding-left: 0;
     padding-right: 0;
 }
 .title {
-    font-family: 'Kunstler Script', Helvetica, sans-serif;
+    font-family: 'Kunstler Script', Courier, sans-serif;
     color: #3f8027;
     /* color: #a7c999; */
     white-space: nowrap;
@@ -66,6 +73,7 @@ main {
 .section_header {
     background: rgba(226, 226, 223, 0.418);
     color: rgb(119, 103, 72);
+    border-radius: 2em !important;
 }
 .anchor {
     position: relative;
@@ -80,4 +88,7 @@ main {
 }
 .card:hover {
     cursor: pointer;
+}
+.details-1 > ul {
+    width: max-content;
 }
