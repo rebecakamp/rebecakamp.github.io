@@ -23,8 +23,6 @@ body {
 main {
     background:  url(assets/wooden_slats.png);
 }
-.carousel-item {
-}
 #section_two {
     border-radius: 40px;
     overflow: hidden;
