@@ -13,6 +13,20 @@ footer,.header_two {
     box-shadow: 0 5px 5px rgba(58, 57, 57, 0.281);
     background-color: #f3eedafa;
 }
+.title {
+    font-family: 'Kunstler Script', sans-serif;
+    color: #3f8027;
+    /* color: #a7c999; */
+    white-space: nowrap;
+}
+.title-date {
+    font-weight: bold;
+    color:#6c866f;
+    font-size: 1.2em;
+}
+.title-address {
+    color: rgb(37, 75, 32);
+}
 main {
     min-height: 90vh;
 }
