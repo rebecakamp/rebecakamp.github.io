@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rebeca & Kamp's Wedding</title>
+    <link rel="stylesheet" type="text/css" href="itinerary.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        var FridayEvents = [
+            {
+                Time: "",
+                Name: "",
+                Location: "",
+                Note: ""
+            },
+            {
+                Time: "Morning / Mid-Day",
+                Name: "Rehersal Walk Through",
+                Location: "Venue",
+                Note: "Wedding Party / Bride & Groom's Family only"
+            },
+            {
+                Time: "6:00 PM",
+                Name: "Tea Ceremony Starts",
+                Location: "Kamp's Parent's house",
+                Note: "Family, Bridesmaids & Groomsmen"
+            },
+            {
+                Time: "",
+                Name: "",
+                Location: "",
+                Note: ""
+            },
+        ];
+        var SaturdayEvents = [
+            {
+                Time: "12:00 PM - 1:00 PM",
+                Name: "Transport Beverages to Venue",
+                Location: "Kamp's Apartment -> Venue",
+                Note: "Groom / Groomsman"
+            },
+            {
+                Time: "4:00 PM",
+                Name: "Ceremony Starts",
+                Location: "Venue",
+                Note: "\"PLACES EVERYONE\""
+            },
+            {
+                Time: "Close to 10",
+                Name: "Bride and Groom leaves the Venue",
+                Location: "Venue",
+                Note: "If you are staying at the apartment, please get in contact with Kamp to arrange transport / obtain apartment key."
+            },
+            {
+                Time: "10:00 PM - 11:00 PM",
+                Name: "Tear Down",
+                Location: "Venue",
+                Note: "Breaking everything down. Must be complete by 11:00 PM"
+            }
+        ];
+    </script>
+</head>
+
+<body class="">
+
+    <!-- HEADER -->
+    <div class="header_two d p-2 justify-content-around">
+        <div class="container-fluid">
+            <div class="row flex-row-reverse align-items-center">
+                <div class="d-none d-lg-flex col-md-12 col-lg-4 py-4 justify-content-center align-items-end">
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <div class="col d-flex justify-content-center align-items-end"><a class="btn btn-warning"
+                            href="./">Back to Main Page</a></div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-lg-4 d-flex justify-content-center align-items-end">
+                    <span class="display-3 title text-center justify-content-center d-flex flex-column">
+                        Rebeca & Kamp
+                    </span>
+                </div>
+
+                <div class="col-lg-4">
+                    <span class="title-date mt-2 text-center justify-content-center d-flex flex-column">
+                        January 15th, 2022
+                    </span>
+                    <span class="title-address mt-2 text-center justify-content-center d-flex flex-column">
+                        <a href="https://goo.gl/maps/5EfeBZrQZjaccWnH8">18810 Misty Morning Lane, <br />Fort Myers, Florida 33913</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <main class="jumbotron mb-0">
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="container border border-5 rounded px-5 py-4">
+                <div class="row flex-column align-items-center">
+                    <div>
+                        <h1 class="text-center">"Rough" Itinerary</h1>
+                        <p>This page contains a rough draft of the itinerary for Friday and Saturday. 
+                            The information listed is primarily for those involved with the wedding's 
+                            preparation and setup. This is not the itinerary of the wedding day; although, it could be if requested.</p>
+                    </div>
+                    <div class="text-center mt-4">
+                        <label><h2>Friday, January 14th:</h2></label>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="table-column table-column-1">Time</th>
+                                    <th class="table-column table-column-2">Event(s)</th>
+                                    <th class="table-column table-column-3">Location</th>
+                                    <th class="table-column table-column-4">Note</th>
+                                </tr>
+                            </thead>
+                            <tbody id="eventsTableFriday"></tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="text-center mt-4">
+                        <label><h2>Saturday, January 15th:</h2></label>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="table-column table-column-1">Time</th>
+                                    <th class="table-column table-column-2">Event(s)</th>
+                                    <th class="table-column table-column-3">Location</th>
+                                    <th class="table-column table-column-4">Note</th>
+                                </tr>
+                            </thead>
+                            <tbody id="eventsTableSaturday"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="p-4">
+        <span class="row justify-content-center text-muted">Copyright &copy; 2021 KodingKamp. All Rights Reserved</span>
+    </footer>
+
+    <script>
+        function displayEvents() {
+            FridayEvents.forEach(event => {
+                eventsTableFriday.innerHTML += 
+                `<tr>
+                    <td class="table-column table-column-1">${event.Time}</td>
+                    <td class="table-column table-column-2 font-weight-bold">${event.Name}</td>    
+                    <td class="table-column table-column-3">${event.Location}</td>    
+                    <td class="table-column table-column-4">${event.Note}</td>    
+                </tr>`
+            })
+            
+            SaturdayEvents.forEach(event => {
+                eventsTableSaturday.innerHTML += 
+                `<tr>
+                    <td class="table-column table-column-1">${event.Time}</td>
+                    <td class="table-column table-column-2 font-weight-bold">${event.Name}</td>    
+                    <td class="table-column table-column-3">${event.Location}</td>    
+                    <td class="table-column table-column-4">${event.Note}</td>    
+                </tr>`
+            })
+        }
+
+        displayEvents();
+    </script>
+</body>
+</html>
